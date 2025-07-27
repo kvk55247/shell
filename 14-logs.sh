@@ -40,7 +40,7 @@ if [ $? -ne 0 ]
 then
     echo "mysql is not installed ... going to install it" &>>$LOG_FILE
     dnf install mysql -y &>>$LOG_FILE
-   VALIDATE #? "MYSQL"
+   VALIDATE $? "MYSQL"
 else
    echo -e " nothing to do MYSQL .... $y  already installed $N " &>>$LOG_FILE
 fi
@@ -66,9 +66,7 @@ if [ $? -ne 0 ]
 then
     echo "nginx is not installed ... going to install it" &>>$LOG_FILE
     dnf install nginx -y &>>$LOG_FILE
-     VALIDATE 
-     
-     #? "nginx"
+     VALIDATE  $? "nginx"
 else
    echo -e " nothing to do python3.... $y  already installed $N " &>>$LOG_FILE
 fi
