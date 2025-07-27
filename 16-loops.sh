@@ -10,7 +10,7 @@ N="\e[0m]"
 LOGS_FOLDER="/var/logs/shell-logs"
 SCRIPT_NAME=$(echo $0 | cut  -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
-PACKAGES=("MYSQL" "PYTHON3" "NGINX" "HTTPD")
+PACKAGES=("mysql" "python3" "nginx" "httpd")
 mkdir -p $LOGS_FOLDER
 echo "script started executing at: $(date)" tee -a $LOG_FILE
 
